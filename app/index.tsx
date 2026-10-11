@@ -12,6 +12,10 @@ export default function Home() {
             setIniciado(true);
             router.push("/catalogo");
         }
+
+        function irParaSobre() {
+            router.push("/sobre");
+        }
     return (
         <SafeAreaView style={styles.safeArea}>
             <ImageBackground
@@ -36,9 +40,15 @@ export default function Home() {
                     texto="Entrar"
                     onPress={iniciarAplicacao}
                     cor="#E72724"
-                >
+                />
+                
+                <Botao
+                    texto="Sobre"
+                    onPress={irParaSobre}
+                    cor="#171bff"
+                />  
 
-                </Botao>
+               
             </ImageBackground>
         </SafeAreaView>
     );
